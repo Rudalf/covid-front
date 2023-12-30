@@ -1,27 +1,35 @@
 # CovidFront
 
-Ce qui a été fait :
-- Liaison et appel des endpoints de l'api
-- Tout est en place pour appliquer une authentification sécurisée avec jwt mais j'ai eu un probleme de version côté back qui m'empêche de m'assurer du bon fonctionnement.
-- Page de connexion nonf contionnelle. Je n'ai pas considéré les rôles et utilisateurs dans ma base de données pour le moment donc mon portail n'est pas fonctionnel. Cependant dans l'état il pourrait fonctionner avec une base de données à jour.
-- Module de routing pour rediriger l'utilisateur
-- Page de recherche de centres par ville
-- Une page non fonctionnelle de prise de rendez-vous. J'ai réalisé le formulaire mais la fonction de réservation ne permet pas de créer une instance Réservation mais un Centre.
-- Un menu non fonctionnel qui ne permet pas de naviguer sur le site
-- Utilisation de 
-  
-Ce que je n'ai pas réussi à faire :
-- Interface de monitoring pour les rôles Admin et SuperAdmin
-- Gestion de rendes-vous patient-médecin-centre
+## Aperçu du Projet
 
+CovidFront est une application front-end conçue pour interagir avec l'API Covid. Bien que le projet ait atteint plusieurs jalons importants, certaines fonctionnalités sont encore en cours de développement ou rencontrent des problèmes spécifiques.
+
+### Fonctionnalités Implémentées
+
+1. **Liaison avec l'API :** Mise en place de la communication avec les différents endpoints de l'API Covid.
+2. **Authentification Sécurisée :** L'infrastructure pour une authentification sécurisée via JWT a été intégrée. Cependant, des problèmes de version côté back-end entravent actuellement la confirmation du bon fonctionnement de cette fonctionnalité.
+3. **Page de Connexion :** Une page de connexion a été partiellement implémentée, bien que la gestion des rôles et des utilisateurs dans la base de données ne soit pas encore prise en compte. Le portail pourrait fonctionner avec une base de données mise à jour.
+4. **Module de Routing :** Un module de gestion des routes a été mis en place pour rediriger les utilisateurs vers les différentes sections de l'application.
+5. **Recherche de Centres par Ville :** Une page permettant la recherche de centres par ville a été implémentée.
+6. **Formulaire de Prise de Rendez-vous :** Un formulaire de prise de rendez-vous a été créé, mais la fonction de réservation ne crée pas actuellement une instance de Réservation, mais plutôt une instance de Centre (page utilisée en guise de test de requêtes http).
+7. **Menu de Navigation :** Un menu de navigation a été ajouté, bien qu'il ne soit pas encore fonctionnel pour la navigation dans l'ensemble du site.
+
+### Défis et Points à Améliorer
+
+1. **Interface de Monitoring :** L'interface de monitoring pour les rôles Admin et SuperAdmin n'a pas encore été implémentée.
+2. **Gestion des Rendez-vous :** La gestion des rendez-vous entre patients, médecins et centres de vaccination n'a pas encore été mise en œuvre.
 
 # Covid-api
 
-Ce qui a été fait :
-- Création de la base de données par programmation
-- Organisation du projet avec repo-controller-service
-- Mise en place d'endpoints intéressants pour les fonctionnalités attendues de l'api
-- 
+## Aperçu du Projet
 
-Ce que je n'ai pas réussi à faire :
-- Mettre en place l'authentification sécurisé jwt. Un problème de version je pense m'empêche d'exploiter complètement la librairie jwt et notamment une classe de configuration nécessaire au fonctionnement de l'authentification.
+Covid-api est la partie back-end de l'application, gérant la logique métier et les interactions avec la base de données.
+
+### Fonctionnalités Implémentées
+
+1. **Création de la Base de Données :** La base de données a été créée par programmation, assurant une organisation structurée du projet avec des composants tels que repo-controller-service.
+2. **Endpoints Intéressants :** Des endpoints importants pour les fonctionnalités attendues de l'API ont été mis en place.
+
+### Défis et Points à Améliorer
+
+1. **Authentification Sécurisée :** La mise en place de l'authentification sécurisée avec JWT rencontre actuellement des problèmes de version, entravant l'utilisation complète de la librairie JWT, notamment une classe de configuration nécessaire au bon fonctionnement de l'authentification.
