@@ -1,0 +1,11 @@
+<div>
+    <label for="name">Trouver un centre de vaccination</label>
+    <input id="name" [(ngModel)]="ville" (ngModelChange)="FiltreVilles($event)" placeholder="Dans quelle ville ?">
+    
+</div>
+
+<ul>
+    <li *ngFor="let a of centers">
+        <app-vaccination-center-choice [center]=a></app-vaccination-center-choice>
+    </li>
+</ul>

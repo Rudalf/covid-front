@@ -1,0 +1,33 @@
+<form [formGroup]="profile">
+    <mat-form-field>
+        <mat-label>Jean</mat-label>
+        <input matInput formControlName="firstName">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Durand</mat-label>
+        <input matInput formControlName="lastName">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>jean.durand@mail.com</mat-label>
+        <input matInput placeholder="pat@example.com" [formControl]="email" required>
+        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Centre</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let center of centers" [value]="center.id">
+            {{center.id}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field> 
+
+      <mat-form-field>
+        <mat-label>Date du rendez-vous</mat-label>
+        <input matInput [matDatepicker]="picker">
+        <mat-hint>JJ/MM/AAAA</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <button mat-flat-button color="primary" (click)="reserver()">Réserver</button>
+</form>
